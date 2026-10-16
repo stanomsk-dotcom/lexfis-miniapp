@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101d31" />
+  <meta name="description" content="LexFis — юридический ИИ-ассистент и сопровождение сложных споров." />
+  <title>LexFis AI — Юридический сервис</title>
+  <style>
+:root{--navy:#14253e;--gold:#c6a259;--ink:#14223a;--gray:#657283;--rule:#e8e9ed}*{box-sizing:border-box}
+html{scroll-behavior:smooth}body{margin:0;background:#f3f5f7;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.app-shell{max-width:640px;min-height:100svh;margin:0 auto;background:white;box-shadow:0 10px 40px #14253e0d;padding-bottom:env(safe-area-inset-bottom)}
+.site-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);padding:18px 20px;gap:8px}
+.brand{display:flex;align-items:center;gap:12px}.brand-sign{width:51px;height:51px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--gold);border-radius:8px;color:var(--navy);font:bold 27px Georgia,serif}.brand-sign span:last-child{color:var(--gold);margin-left:-3px;margin-top:9px}.brand strong{display:block;font:bold 22px Georgia,serif;letter-spacing:.15em}.brand small{font-size:8px;letter-spacing:.14em;color:#a88138}
+.header-chip{font-size:9px;color:#947235;border-radius:24px;background:#f7f1e5;font-weight:700;padding:8px;max-width:112px;text-align:center}
+.screen[hidden]{display:none}.hero{padding:40px 23px 33px;color:white;background:radial-gradient(circle at 100% 0%,#435670,transparent 53%),linear-gradient(148deg,#203750,#0d1b2d)}
+.eyebrow{color:#dfc17e;font-size:10px;font-weight:800;letter-spacing:.13em;line-height:1.5}.gold-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:6px}
+.hero h1{font:normal 48px/1.12 Georgia,serif;letter-spacing:-.025em;margin:20px 0 19px}.hero h1 em{color:#e4c689;font-style:normal}.hero>p{font-size:14px;line-height:1.8;color:#ccd9e8;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}.btn{min-height:49px;padding:13px 16px;border-radius:10px;border:0;font-size:13px;font-weight:750;background:var(--gold);color:#16233a;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-align:center;text-decoration:none}
+.btn.soft{background:#ffffff1a;border:1px solid #ffffff3d;color:white}.btn.outline{background:white;border:1px solid #d0d6df;color:var(--navy)}.btn.full{width:100%}
+.hero-stat{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:30px;font-size:12px;color:#cbd3df}.hero-stat strong{color:white}.stat-line{height:2px;width:22px;background:var(--gold)}
+.services{padding:30px 20px 18px}.section-title>span{color:#ac873c;font-size:10px;letter-spacing:.15em;font-weight:800}.section-title h2{font:normal 29px Georgia,serif;margin:8px 0 20px}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.service-card{position:relative;background:#fff;border:1px solid var(--rule);text-align:left;display:flex;align-items:flex-start;flex-direction:column;border-radius:14px;min-height:186px;padding:17px 14px 24px;color:var(--ink)}
+.service-symbol{display:flex;align-items:center;justify-content:center;width:43px;height:43px;border-radius:10px;background:#f7f1e7;color:#ac843b;font:normal 25px Georgia,serif;margin-bottom:17px}.service-card strong{font-size:13px;line-height:1.4;margin-bottom:7px}.service-card>span:not(.service-symbol){font-size:11px;color:var(--gray);line-height:1.55}.service-card b{position:absolute;right:14px;bottom:12px;font-size:17px;color:#b18a49}
+.trust-panel{display:flex;align-items:center;gap:14px;background:#f5f6f7;border-radius:14px;margin:8px 20px 28px;padding:20px}.trust-mark{flex:0 0 48px;height:48px;display:flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:100%;font:bold 21px Georgia,serif;color:var(--gold)}.trust-panel strong{font-size:13px}.trust-panel p{font-size:11px;line-height:1.6;color:var(--gray)}
+.screen:not(#screen-home){padding:19px 23px 35px;min-height:72svh}.back{border:0;background:transparent;font-size:12px;color:#7b8a9e;padding:10px 0}.screen-heading{margin:28px 0 21px}.screen-heading h2{font:normal 36px/1.16 Georgia,serif;margin:15px 0}.screen-heading p{font-size:14px;line-height:1.75;color:var(--gray)}
+.next-steps{margin:28px 0 24px}.step{display:flex;align-items:flex-start;gap:13px;border-top:1px solid var(--rule);padding:17px 0}.step-number{flex:0 0 29px;width:29px;height:29px;background:#f7f0e5;color:#997943;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800}.step strong{display:block;font-size:13px;margin-bottom:5px}.step p{margin:0;color:var(--gray);font-size:12px;line-height:1.65}.inline-info{background:#faf7f0;border-left:3px solid var(--gold);padding:14px;margin:21px 0;color:#73664d;font-size:12px;line-height:1.7}.site-foot{display:flex;justify-content:space-between;padding:20px 23px;border-top:1px solid var(--rule);color:#8b95a2;font-size:11px}.site-foot a{color:#a78647;text-decoration:none}
+@media(max-width:365px){.hero h1{font-size:42px}.hero{padding:34px 19px}.header-chip{display:none}.services{padding:27px 15px}.service-card{padding:14px 11px 20px}.service-card strong{font-size:12px}}
+</style>
+  <script src="https://telegram.org/js/telegram-web-app.js?64"></script>
+  
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-head">
+      <div class="brand" role="banner">
+        <div class="brand-sign"><span>L</span><span>F</span></div>
+        <div><strong>LEXFIS</strong><small>LEGAL INTELLIGENCE</small></div>
+      </div>
+      <span class="header-chip">ЮРИДИЧЕСКИЙ СЕРВИС</span>
+    </header>
+
+    <main id="screen-home" class="screen active">
+      <section class="hero">
+        <span class="eyebrow"><span class="gold-dot"></span> СУДЕБНАЯ И НАЛОГОВАЯ ЗАЩИТА</span>
+        <h1>Ваш вопрос.<br><em>Наше решение.</em></h1>
+        <p>Первичный правовой анализ, проверка документов и связь с юристом через действующий Telegram-бот LexFis AI.</p>
+        <div class="hero-actions">
+          <button class="btn primary" data-open="question">Задать вопрос <span aria-hidden="true">↗</span></button>
+          <button class="btn soft" data-open="consult">Связаться с юристом</button>
+        </div>
+        <div class="hero-stat"><span class="stat-line"></span><strong>Более 14 лет</strong><span>юридической и судебной практики</span></div>
+      </section>
+      <section class="services" aria-label="Услуги">
+        <div class="section-title"><span>НАШИ ВОЗМОЖНОСТИ</span><h2>Чем мы можем помочь</h2></div>
+        <div class="service-grid">
+          <button class="service-card" data-open="question"><span class="service-symbol">§</span><strong>Юридический вопрос</strong><span>Получите первый ответ от LexFis AI</span><b aria-hidden="true">↗</b></button>
+          <button class="service-card" data-open="document"><span class="service-symbol">▤</span><strong>Проверка документа</strong><span>PDF, Word, фотографии</span><b aria-hidden="true">↗</b></button>
+          <button class="service-card" data-open="dispute"><span class="service-symbol">⚖</span><strong>Судебный спор</strong><span>Позиция, риски и стратегия</span><b aria-hidden="true">↗</b></button>
+          <button class="service-card" data-open="consult"><span class="service-symbol">✧</span><strong>Консультация юриста</strong><span>Персональное сопровождение</span><b aria-hidden="true">↗</b></button>
+        </div>
+      </section>
+      <section class="trust-panel"><div class="trust-mark">LF</div><div><strong>Профессиональная юридическая помощь</strong><p>Налоговые споры · Арбитраж · Банкротство · Корпоративное право</p></div></section>
+    </main>
+
+    <main id="screen-question" class="screen" hidden><button type="button" class="back" data-open="home">← На главную</button><div class="screen-heading"><span class="eyebrow">LEXFIS AI · ЮРИДИЧЕСКИЙ СЕРВИС</span><h2>Задать юридический вопрос</h2><p>Получите предварительный ответ от действующего LexFis AI в чате Telegram.</p></div><div class="next-steps"><div class="step"><span class="step-number">1</span><div><strong>Откройте AI-бота</strong><p>Перейдите в диалог с @LexFisAI_bot.</p></div></div><div class="step"><span class="step-number">2</span><div><strong>Опишите обстоятельства</strong><p>Сообщите даты, свою сторону, имеющиеся документы и желаемый результат.</p></div></div><div class="step"><span class="step-number">3</span><div><strong>Получите предварительный ответ</strong><p>При необходимости воспользуйтесь услугами юриста.</p></div></div></div><button class="btn primary full open-bot" data-mode="general">Задать вопрос AI-юристу ↗</button><div class="inline-info">Ответ AI является предварительным и не заменяет полноценного изучения материалов дела.</div></main><main id="screen-document" class="screen" hidden><button type="button" class="back" data-open="home">← На главную</button><div class="screen-heading"><span class="eyebrow">LEXFIS AI · ЮРИДИЧЕСКИЙ СЕРВИС</span><h2>Проверить документ</h2><p>LexFis AI принимает документы в чате Telegram. В этом мини-приложении документы не загружаются и не сохраняются.</p></div><div class="next-steps"><div class="step"><span class="step-number">1</span><div><strong>Откройте Telegram-бота</strong><p>Вернитесь в переписку с действующим LexFis AI.</p></div></div><div class="step"><span class="step-number">2</span><div><strong>Прикрепите документ</strong><p>Используйте стандартную функцию вложения PDF, Word или изображения.</p></div></div><div class="step"><span class="step-number">3</span><div><strong>Укажите задачу</strong><p>Напишите, какую позицию защищаем и какие риски необходимо оценить.</p></div></div></div><button class="btn primary full open-bot" data-mode="general">Перейти к загрузке документа ↗</button><div class="inline-info">Перед направлением материалов, содержащих персональные данные и коммерческую тайну, оцените допустимость передачи их через Telegram.</div></main><main id="screen-dispute" class="screen" hidden><button type="button" class="back" data-open="home">← На главную</button><div class="screen-heading"><span class="eyebrow">LEXFIS AI · ЮРИДИЧЕСКИЙ СЕРВИС</span><h2>Разобрать судебный спор</h2><p>Начните анализ правовой позиции, перспектив и процессуальной стратегии с LexFis AI.</p></div><div class="next-steps"><div class="step"><span class="step-number">1</span><div><strong>Определите стадию</strong><p>Укажите суд, номер дела, инстанцию и процессуальные сроки.</p></div></div><div class="step"><span class="step-number">2</span><div><strong>Опишите позицию</strong><p>Уточните, чьи интересы защищаете, требования и возражения оппонента.</p></div></div><div class="step"><span class="step-number">3</span><div><strong>Направьте материалы</strong><p>Передайте документы в чат бота и поставьте конкретную задачу.</p></div></div></div><button class="btn primary full open-bot" data-mode="general">Начать разбор судебного дела ↗</button><div class="inline-info">Ссылки на судебную практику необходимо самостоятельно проверять по официальным первоисточникам.</div></main><main id="screen-consult" class="screen" hidden><button type="button" class="back" data-open="home">← На главную</button><div class="screen-heading"><span class="eyebrow">LEXFIS AI · ЮРИДИЧЕСКИЙ СЕРВИС</span><h2>Получить консультацию</h2><p>В существующем боте настроен отдельный маршрут обращения к юристу LexFis.</p></div><div class="next-steps"><div class="step"><span class="step-number">1</span><div><strong>Откройте консультацию</strong><p>Нажмите кнопку ниже для запуска специального сценария.</p></div></div><div class="step"><span class="step-number">2</span><div><strong>Опишите ситуацию</strong><p>Укажите контакты, характер вопроса и срочность.</p></div></div><div class="step"><span class="step-number">3</span><div><strong>Получите обратную связь</strong><p>Ваше обращение будет обработано в порядке работы юридического сервиса.</p></div></div></div><button class="btn primary full open-bot" data-mode="consult">Перейти к консультации юриста ↗</button><div class="inline-info">Не отправляйте пароли, API-токены и другие секретные реквизиты.</div></main>
+    <footer class="site-foot"><span>© LEXFIS</span><a href="https://lexfis.ru" target="_blank" rel="noopener noreferrer">Официальный сайт ↗</a></footer>
+  </div>
+<script>
+(function(){"use strict";
+const tg=window.Telegram&&window.Telegram.WebApp;
+if(tg){tg.ready();tg.expand();try{tg.setHeaderColor("#14253e")}catch(_e){}}
+const ids=["home","question","document","dispute","consult"];
+function show(id){if(!ids.includes(id))return;for(const key of ids){document.getElementById("screen-"+key).hidden=key!==id}window.scrollTo(0,0)}
+document.querySelectorAll("[data-open]").forEach(el=>el.addEventListener("click",()=>show(el.dataset.open)));
+document.querySelectorAll(".open-bot").forEach(el=>el.addEventListener("click",()=>{const url=el.dataset.mode==="consult"?"https://t.me/LexFisAI_bot?start=post_consult":"https://t.me/LexFisAI_bot";if(tg&&tg.openTelegramLink)tg.openTelegramLink(url);else window.location.assign(url)}));
+show("home");
+})();
+</script></body>
+</html>
